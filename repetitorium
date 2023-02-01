@@ -1,0 +1,112 @@
+1) Graphics Pipeline
+
+2) Vertex Shader - What else can be done with a vertex shader?
+
+3) Fragment Shader(Pixel shader) 
+
+Geometry Shader (create geometry on the fly)
+
+4) Double buffering and V-Sync (minimum to have)
+    Vsync avoids swapping during scan out (Wait for exchange of buffers)
+    Additional latency => wait for the next Frame
+
+5) Blinn Phong Model
+    Rescaled regular phong model, energy conservation
+    looks more realistic 
+
+6) Cook Torrance Model (Phsyical bades model)
+    D= Microfacets (Model of surface roughness)
+    F= Fresnel reflections (specular reflectance and transmission)
+    G= Geometric Attenuation (measure of the amount of self shadowing)
+    This all is normalized
+
+7) Microfacets Distribution (What is it?)
+
+8) Geometric Attenuation (What is it?)
+    Blocking on the incoming and on the outcoming way
+    For metallic objects!
+
+9) Texture Mapping (Process of finding texture coordinates for each points of a manifold in our 3d Space)
+    Texture coordinates 
+
+10) Mip Mapping
+    Create image pyramid out of texture
+    Sample image pyramid
+    Far away -> Minification
+
+11) Multipass Rendering
+    Concatenate multiple rendering technics
+
+12) Light Mapping
+    Baked lightning
+
+13) Environment Mapping
+    Texture to create reflections
+    Cubemaps, Parabolic ...
+
+14) Bump Mapping
+    simulate rough surfaces by calcing per-pixel illumination
+    tweak the normal
+
+15) Deferred Rendering (Multipass)
+
+16) Super Sample Anti Aliasing (SSAA)
+
+17) Multisampling (MSAA)
+    Not possible on Deferres (Too much memory)
+
+18) Morphological Anti-Aliasing (Post-Processing method)
+
+19) Temporal Anti Aliasing (TAA)
+    Reusing information from past frames
+    Camera stands still -> Jittered sampling pattern (moving samples a bit)
+        get an average of the temporal samples
+    Camera moving -> Reproject - Motion vector texture - look how much pixel moved and take shading from old render buffer -> can lead to error (disocclusion) -> History rejection -> All samples that are available get integrated and blended
+
+20) Particle Systems
+
+21) Stencil Buffer
+    1 Bit
+    8 Bit -> states (front, back, belonging to you, to me...)
+        eg. mask in a group photograph
+    
+22) Screen Space Reflections (SSR)
+    Mimic raytracing in the depth buffer
+
+23) Depth Peeling
+    Kind of depth sorting for transparancy
+    other techniques also important
+
+24) Per Pixel Linked list
+
+25) Shadow Mapping
+    1,2 Shoot ray to light source
+    Texture lookup and comparison operation
+
+26) Shadow Volumes
+    USe stencil buffer to count for a shdowvolume how often we are penetrarting the entrance and exit of the volume.
+
+27) Ambient Occlussion
+    For every point on the surface 
+
+28) Virtual Point Light (GLobal illumination approach for light transport)
+    Instant Radiosity
+
+29) Precomputed Radiance Transfered
+    Light transport
+
+30) Spehrical harmonics
+
+31) GPU Raytracing
+    Software: 5 Shaders
+    HArdware: Fixed functions extension in each gpu core
+
+32) Bounding Volume Hierarchy   
+    lot of boxes in boxes
+
+33) Levels of Detail
+
+34) Potentially Visible Set Rendering
+
+35) Cells and Portal technique?
+
